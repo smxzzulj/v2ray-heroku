@@ -56,7 +56,7 @@ chmod +x "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}/*"
 
 mkdir "/caddybin"
 cd "/caddybin"
-wget -qO "caddy.tar.gz" "https://caddyserver.com/download/linux/${dl_version}?plugins=http.forwardproxy&license=personal"
+wget -qO "caddy.tar.gz" "https://caddyserver.com/download/linux/${dl_version}?license=personal"
 tar xvf "caddy.tar.gz"
 rm -f "caddy.tar.gz"
 chmod +x "caddy"
