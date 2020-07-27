@@ -56,7 +56,7 @@ chmod +x "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}/*"
 
 mkdir "/caddybin"
 cd "/caddybin"
-wget -qO "caddy.tar.gz" "https://caddyserver.com/download/linux/${dl_version}?license=personal"
+wget -qO "caddy.tar.gz" "https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz"
 tar xvf "caddy.tar.gz"
 rm -f "caddy.tar.gz"
 chmod +x "caddy"
