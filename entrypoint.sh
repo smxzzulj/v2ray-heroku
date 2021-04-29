@@ -50,8 +50,9 @@ fi
 #mkdir "/v2raybin"
 #cd "/v2raybin"
 wget -qO "v2ray.zip" "https://github.com/v2ray/v2ray-core/releases/download/${v2ray_version}/v2ray-linux-${System_bit}.zip"
-unzip "v2ray.zip"
-rm -f "v2ray.zip"
+ls 
+unzip -v "v2ray.zip"
+#rm -f "v2ray.zip"
 chmod +x "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}/*"
 
 mkdir "/caddybin"
