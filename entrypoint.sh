@@ -47,7 +47,7 @@ else
   v2ray_version="v3.47"
 fi
 
-mkdir "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
+mkdir -p "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
 cd "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
 wget -qO "v2ray.zip" "https://github.com/v2ray/v2ray-core/releases/download/${v2ray_version}/v2ray-linux-${System_bit}.zip"
 ls 
