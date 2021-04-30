@@ -44,7 +44,7 @@ System_bit="$(getconf LONG_BIT)"
 if [ "$VER" = "latest" ]; then
   v2ray_version="$(wget -qO- "https://api.github.com/repos/v2ray/v2ray-core/releases/latest" | grep "tag_name" | cut -d\" -f4)"
 else
-  v2ray_version="v3.47"
+  v2ray_version="v$VER"
 fi
 
 mkdir -p "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
