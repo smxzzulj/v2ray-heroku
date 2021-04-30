@@ -47,13 +47,13 @@ else
   v2ray_version="v$VER"
 fi
 
-mkdir "/v2raybin"
-cd "/v2raybin"
-wget -qO "v2ray.zip" "https://github.com/v2ray/v2ray-core/releases/download/v3.47/v2ray-linux-64.zip"
+mkdir "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
+cd "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}"
+wget -qO "v2ray.zip" "https://github.com/v2ray/v2ray-core/releases/download/${v2ray_version}/v2ray-linux-${System_bit}.zip"
 ls 
 unzip -v "v2ray.zip"
 rm -f "v2ray.zip"
-chmod +x "/v2raybin/v2ray-v3.47-linux-64/*"
+chmod +x "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}/*"
 
 mkdir "/caddybin"
 cd "/caddybin"
@@ -69,7 +69,7 @@ wget -qO "demo.tar.gz" "https://github.com/shell-script/v2ray-heroku/raw/master/
 tar xvf "demo.tar.gz"
 rm -f "demo.tar.gz"
 
-cat <<-EOF > "/v2raybin/v2ray-v3.47-linux-64/config.json"
+cat <<-EOF > "/v2raybin/v2ray-${v2ray_version}-linux-${System_bit}/config.json"
 {
     "log":{
         "loglevel":"warning"
@@ -141,7 +141,7 @@ else
   echo -n "${vmess}" | qrencode -s 6 -o "/wwwroot/${V2_QR_Path}/qrcode.png"
 fi
 
-cd "/v2raybin/v2ray-v3.47-linux-64"
+cd "/v2ray-${v2ray_version}-linux-${System_bit}"
 ./v2ray &
 cd "/caddybin"
 ./caddy -conf="Caddyfile"
